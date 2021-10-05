@@ -1,0 +1,427 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="./poccss.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    </head>
+    <body>
+        <div class="headerr">
+            <p class="beeptext"><i id="beep-icon"class="fad fa-bags-shopping"></i> beep</p>
+            <div class="inside">
+            <p class="same"><i class="fas fa-user"></i></p>
+            <p class="same profiletext" >My Profile</p>
+            <p class="same"><i class="fas fa-shopping-bag"></i></p>
+            <p class="same">0 items</p>
+            <p class="same">$0.0</p>
+            <div class="sametext">
+                <input type="text" id="text" class="textt">
+            <button class="btn"><i  class="fas fa-search"></i> </button></div>
+            </div>
+        </div>
+<div class="headerr1">
+    <a class="anchor" href="#">Home</a> / <a class="anchor" href="#">Accessories</a>
+</div>
+<div class="insideheader" >
+    <div class="first">
+      <div class="sidebar"style="background:#D3D3D3">
+        <h4>All CATEGORIES</h4>
+        <ul type="none">
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Cables & Dicks</a></li>
+            <li><a href="#">Cases & Films</a></li>
+            <li><a href="#">Charging Devices</a></li>
+            <li><a href="#">Connected Home</a></li>
+            <li><a href="#">Head Phones</a></li>
+        </ul> 
+    </div> 
+      <div class="prices" style="background:#D3D3D3">
+        <h4 class="pricestext">PRICES</h4>
+        <p class="min">Min</p><p class="max">Max</p>
+        <input class="input1"type="number"id="min" min="10" max="100"> -
+        <input  class="input2"type="number" min="10" max="100">
+      </div>
+      <div class="color" style="background:#D3D3D3">
+        <h4 class="colortext">COLOR</h4>
+        <span class="dot" style="background:aquamarine"></span>
+        <span class="dot" style="background:yellow"></span>
+        <span class="dot" style="background:red"></span>
+        <span class="dot" style="background:rgb(189, 216, 189)"></span>
+        <span class="dot" style="background:rgb(173, 84, 224)"></span>
+        <span class="dot" style="background:rgb(71, 128, 214)"></span>
+        <span class="dot" style="background:rgb(234, 78, 248)"></span>
+        <span class="dot" style="background:rgb(226, 164, 72)"></span>
+        <span class="dot" style="background:rgb(250, 80, 199)"></span>
+        <span class="dot" style="background:rgb(223, 210, 38)"></span>
+        <span class="dot" style="background:rgb(231, 70, 70)"></span>
+        <span class="dot" style="background:green"></span>
+      </div>
+      <div class="brand" style="background:#D3D3D3">
+        <div class="sidebar"style="background:#D3D3D3"">
+          <h4>BRAND</h4>
+          <ul type="none" class="ul">
+              <li><a href="#">Apple</a></li>  
+              <li><a href="#">Beats </a></li>
+              <li><a href="#">Samsung </a></li>
+              <li><a href="#">Siemens </a></li>
+          </ul> 
+         
+          
+      </div> 
+      </div>
+
+
+    </div>
+    <div class="second" >
+      <div class="img-slider">
+        <div class="slide active">
+          <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-pro-max-3.jpg" alt="">
+          <div class="info">
+            <a href="#">Shop Now</a>
+            
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-pro-max-4.jpg" alt="">
+          <div class="info">
+            <a href="#">Shop Now</a>
+              </div>
+        </div>
+        <div class="slide">
+          <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-pro-max-2.jpg" alt="">
+          <div class="info">
+            <a href="#">Shop Now</a>
+            </div>
+        
+        </div>
+        <div class="slide">
+          <img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-pro-max-2.jpg" alt="">
+          <div class="info">
+            <a href="#">Shop Now</a>
+           </div>
+        </div>
+     
+    
+        <div class="navigation">
+          <div class="btn active"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+          <div class="btn"></div>
+        </div>
+        <script type="text/javascript">
+          var slides = document.querySelectorAll('.slide');
+          var btns = document.querySelectorAll('.btn');
+          let currentSlide = 1;
+      
+          // Javascript for image slider manual navigation
+          var manualNav = function(manual){
+            slides.forEach((slide) => {
+              slide.classList.remove('active');
+      
+              btns.forEach((btn) => {
+                btn.classList.remove('active');
+              });
+            });
+      
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
+          }
+      
+          btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+              manualNav(i);
+              currentSlide = i;
+            });
+          });
+      
+          // Javascript for image slider autoplay navigation
+          var repeat = function(activeClass){
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+      
+            var repeater = () => {
+              setTimeout(function(){
+                [...active].forEach((activeSlide) => {
+                  activeSlide.classList.remove('active');
+                });
+    
+                console.log(slides.length);
+              slides[i].classList.add('active');
+              btns[i].classList.add('active');
+              i++;
+      
+              if(slides.length == i){
+                i = 0;
+              }
+              if(i >= slides.length){
+                return;
+              }
+              repeater();
+            }, 10000);
+            }
+            repeater();
+          }
+          repeat();
+          </script>
+      
+      </div>
+      <div class="dropdown">
+     <ul type="none"class="dropdown1">
+     <li>13 items</li>
+     <li>Sort by<select>
+       <option>Name</option>
+       <option>Size</option>
+       <option>Price</option>
+     </select></li>
+     <li>Show<select>
+      <option>12</option>
+      <option>14</option>
+      <option>16</option>
+    </select></li>
+     <li class="menu"><i class="fas fa-bars"></i></li>
+     </ul>
+      </div>
+
+      <div class="items">
+        <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+    
+        <script src="pocjs.js"></script>
+       
+        <div class="price-container">
+        <p class="price">$499</p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+      <script src="pocjs.js"></script>
+        <div class="price-container">
+        <p class="price">$499</p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+      <script src="pocjs.js"></script>
+        <div class="price-container">
+        <p class="price">$499</p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+      <script src="pocjs.js"></script>
+        <div class="price-container">
+        <p class="price">$499</p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+      <script src="pocjs.js"></script>
+        <div class="price-container">
+        <p class="price">$499</p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+      <script src="pocjs.js"></script>
+        <div class="price-container">
+        <p class="price">$499</p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+      <script src="pocjs.js"></script>
+        <div class="price-container">
+        <p class="price">$499</p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+      <script src="pocjs.js"></script>
+        <div class="price-container">
+        <p class="price">$499 </p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+      <script src="pocjs.js"></script>
+        <div class="price-container">
+        <p class="price">$499</p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+      <script src="pocjs.js"></script>
+        <div class="price-container">
+        <p class="price">$499</p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      
+      <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+      <script src="pocjs.js"></script>
+        <div class="price-container">
+        <p class="price">$499</p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      <div class="items-inside">
+        <img class="img13"src="https://image.freepik.com/free-photo/pink-headphones-wireless-digital-device_53876-96804.jpg">
+        <div class="stars">
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+          <a>⭐</a>
+        </div>
+      <script src="pocjs.js"></script>
+        <div class="price-container">
+        <p class="price">$499</p>
+       <p class="pricestrike">$599</p>
+       </div>
+      </div>
+      
+    <div class="links">
+      
+          <a class="anchor" href="#">1</a>
+          
+          <a  href="#">2</a>
+          
+          <a href="#">3</a>
+          
+          <a href="#">4</a>
+          
+          <a href="#">5</a>
+
+      </nav>
+    </div>
+             </div>
+   
+</div>
+</div>
+<footer class="footer">
+  <div class="footer__addr">
+    
+    <p class="beeptext"><i id="beep-icon"class="fad fa-bags-shopping"></i> beep</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellat excepturi sequi nobis dolorem deleniti autem itaque exercitationem provident suscipit praesentium quisquam explicabo soluta voluptatibus consequuntur voluptate velit rerum at, consequatur possimus sunt totam, obcaecati rem molestias. Necessitatibus, vitae! Quisquam.</p>
+          
+      <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+    </address>
+  </div>
+  
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <h2 class="nav__title">Follow us</h2>
+
+      <p>Since 1970 its been a good organisation and having very good repettion.</p>
+    </li>
+    
+    
+    <li class="nav__item">
+      <h2 class="nav__title">Contact us</h2>
+      <p>Contact number:009090909</p>
+      <p>Mumbai,thane.</p>
+      </li>
+    
+  </ul>
+  
+  <div class="legal">
+    <p>&copy; 2019 Something. All rights reserved.</p>
+    
+    <div class="legal__links">
+      <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+    </div>
+  </div>
+</footer>
+ 
+  
+<script src="./pocjs.js"></script>
+</body>
+</html>
